@@ -8,9 +8,11 @@ const io = new Server(server);
 // app.get('/', (req, res) => {
 //   res.send('<h1>Hello world</h1>');
 // });
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-  });
+// app.get('/', (req, res) => {
+//     res.sendFile(__dirname + '/index.html');
+//   });
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
 
   io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
