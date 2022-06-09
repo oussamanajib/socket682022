@@ -28,6 +28,8 @@ io.on('connection', (socket) => {
       console.log('message: ' + msg);
     });
   });
-server.listen(3000, () => {
-  console.log('listening on *:3000');
-});
+// server.listen(3000, () => {
+//   console.log('listening on *:3000');
+// });
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
